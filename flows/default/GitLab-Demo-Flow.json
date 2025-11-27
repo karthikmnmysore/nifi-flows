@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1764224401254,
+    "description" : "Demo flow stored in GitLab",
+    "identifier" : "GitLab-Demo-Flow",
+    "lastModifiedTimestamp" : 1764224401254,
+    "name" : "GitLab Demo Flow ",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
