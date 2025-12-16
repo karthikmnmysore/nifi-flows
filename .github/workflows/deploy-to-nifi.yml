@@ -19,7 +19,7 @@ jobs:
 
           echo "Authenticating with NiFi..."
 
-          TOKEN=$(curl -k -X POST \
+          TOKEN=$(curl -ks -X POST \
             "${{ secrets.NIFI_URL }}/access/token" \
             -H "Content-Type: application/x-www-form-urlencoded" \
             -d "username=${{ secrets.NIFI_USERNAME }}&password=${{ secrets.NIFI_PASSWORD }}")
@@ -28,7 +28,7 @@ jobs:
 
           echo "Deploying $FLOW_FILE to NiFi..."
 
-          curl -k -X POST \
+          curl -ks -X POST \
             -H "Authorization: Bearer $TOKEN" \
             -F "file=@${FLOW_FILE}" \
             -F "clientId=github-actions" \
