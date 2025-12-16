@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1765860689922,
+    "description" : "Demo flow stored in GitHub",
+    "identifier" : "GitHub-Demo-Flow",
+    "lastModifiedTimestamp" : 1765860689922,
+    "name" : "GitHub Demo Flow",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
