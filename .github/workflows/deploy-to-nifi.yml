@@ -17,10 +17,20 @@ jobs:
         run: |
           FLOW_FILE="new-flow/default/GitHub-Demo-Flow.json"
 
+          echo "Authenticating with NiFi..."
+
+          TOKEN=$(curl -k -X POST \
+            "${{ secrets.NIFI_URL }}/access/token" \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            -d "username=${{ secrets.NIFI_USERNAME }}&password=${{ secrets.NIFI_PASSWORD }}")
+
+          echo "Token received"
+
           echo "Deploying $FLOW_FILE to NiFi..."
 
-          curl -k -u "${{ secrets.NIFI_USERNAME }}:${{ secrets.NIFI_PASSWORD }}" \
-            -X POST \
+          curl -k -X POST \
+            -H "Authorization: Bearer $TOKEN" \
             -H "Content-Type: application/json" \
             --data-binary @"$FLOW_FILE" \
             "${{ secrets.NIFI_URL }}/process-groups/root/process-groups"
+
