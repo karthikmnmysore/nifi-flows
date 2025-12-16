@@ -32,5 +32,5 @@ jobs:
             -H "Authorization: Bearer $TOKEN" \
             -H "Content-Type: application/json" \
             --data-binary @"$FLOW_FILE" \
-            "${{ secrets.NIFI_URL }}/process-groups/root/process-groups"
+            "${{ secrets.NIFI_URL }}/process-groups/root/process-groups/import"
 
