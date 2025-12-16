@@ -24,6 +24,11 @@ jobs:
             -H "Content-Type: application/x-www-form-urlencoded" \
             -d "username=${{ secrets.NIFI_USERNAME }}&password=${{ secrets.NIFI_PASSWORD }}")
 
+          if [ -z "$TOKEN" ]; then
+            echo "Failed to get NiFi token"
+            exit 1
+          fi
+
           echo "Token received"
 
           echo "Deploying $FLOW_FILE to NiFi..."
