@@ -15,7 +15,7 @@ jobs:
 
       - name: Deploy flow to NiFi
         run: |
-          FLOW_FILE="new-flows/default/GitHub-Demo-Flow.json"
+          FLOW_FILE="new-flow/default/GitHub-Demo-Flow.json"
 
           echo "Deploying $FLOW_FILE to NiFi..."
 
