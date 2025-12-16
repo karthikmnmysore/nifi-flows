@@ -1,0 +1,28 @@
+name: Deploy NiFi Flow
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "new-flows/**/*.json"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Deploy flow to NiFi
+        run: |
+          FLOW_FILE="new-flows/default/GitHub-Demo-Flow.json"
+
+          echo "Deploying $FLOW_FILE to NiFi..."
+
+          curl -k -u "${{ secrets.NIFI_USERNAME }}:${{ secrets.NIFI_PASSWORD }}" \
+            -X POST \
+            -H "Content-Type: application/json" \
+            --data-binary @"$FLOW_FILE" \
+            "${{ secrets.NIFI_URL }}/process-groups/root/process-groups"
