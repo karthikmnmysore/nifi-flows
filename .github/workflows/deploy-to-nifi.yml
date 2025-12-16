@@ -31,7 +31,7 @@ jobs:
 
           echo "Token received (length: ${#TOKEN})"
 
-          echo "Deploying $FLOW_FILE to NiFi..."
+          echo "Importing flow into NiFi..."
 
           curl -ks -X POST \
             -H "Authorization: Bearer $TOKEN" \
@@ -40,4 +40,5 @@ jobs:
             -F "positionX=0" \
             -F "positionY=0" \
             "${{ secrets.NIFI_URL }}/process-groups/root/process-groups/import"
+
 
