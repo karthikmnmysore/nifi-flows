@@ -30,7 +30,9 @@ jobs:
 
           curl -k -X POST \
             -H "Authorization: Bearer $TOKEN" \
-            -H "Content-Type: application/json" \
-            --data-binary @"$FLOW_FILE" \
+            -F "file=@${FLOW_FILE}" \
+            -F "clientId=github-actions" \
+            -F "positionX=0" \
+            -F "positionY=0" \
             "${{ secrets.NIFI_URL }}/process-groups/root/process-groups/import"
 
