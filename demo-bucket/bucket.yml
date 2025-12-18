@@ -1,6 +1,6 @@
 flows:
-  e27fe163-a3bc-4755-83ff-424087416b20: {ver: 1, file: demo_flow.snapshot, comments: '2',
-    author: anonymous, created: 1766039961246, flowName: demo flow, flowDesc: demo
+  e27fe163-a3bc-4755-83ff-424087416b20: {ver: 2, file: demo_flow.snapshot, comments: '3',
+    author: anonymous, created: 1766042514664, flowName: demo flow, flowDesc: demo
       dis}
 layoutVer: 1
 bucketId: f80e6976-46e2-4967-842a-198ed3e06373

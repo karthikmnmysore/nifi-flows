@@ -45,37 +45,6 @@
           "bends" : [ ],
           "componentType" : "CONNECTION",
           "destination" : {
-            "groupId" : "27a3a7c3-8bc7-3112-8dd9-9b5e60a5701e",
-            "id" : "0129ce50-c958-31f9-8dac-f04b53a54e61",
-            "instanceIdentifier" : "fb167688-355a-3d4f-593a-23775bc80992",
-            "name" : "ARC Collector Port Input",
-            "type" : "INPUT_PORT"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "0bd68968-1fa0-3649-be36-6478d3598084",
-          "identifier" : "2699e718-d967-3e11-b77d-124fbe3fe6bb",
-          "instanceIdentifier" : "4217f8f9-940e-3345-7067-b5817f83368a",
-          "labelIndex" : 0,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "" ],
-          "source" : {
-            "groupId" : "f5cf87ce-175b-333e-830d-985758b3e7ff",
-            "id" : "fa912326-1df3-3a19-ad38-1ae1f0633c7b",
-            "instanceIdentifier" : "31291046-b972-35d2-1bc1-a2d5b89dba85",
-            "name" : "Start collectors out port",
-            "type" : "OUTPUT_PORT"
-          },
-          "zIndex" : 21
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
             "groupId" : "f5cf87ce-175b-333e-830d-985758b3e7ff",
             "id" : "c2fa8bd0-dd45-3495-a81e-fef1a1243863",
             "instanceIdentifier" : "5969157f-cf14-3c41-f218-cb5f5c6ab46f",
